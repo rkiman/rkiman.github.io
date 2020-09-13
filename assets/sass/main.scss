@@ -5,7 +5,7 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700');
-@import url('font-awesome.min.css');
+@import url('fontawesome-all.min.css');
 
 /*
 	Miniport by HTML5 UP
@@ -581,7 +581,7 @@
 					background-color: #2DAAE4;
 				}
 
-				&.fa-facebook {
+				&.fa-facebook-f {
 					background-color: #3C5A98;
 				}
 
@@ -589,7 +589,7 @@
 					background-color: #C4376B;
 				}
 
-				&.fa-linkedin {
+				&.fa-linkedin-in {
 					background-color: #006599;
 				}
 
@@ -703,22 +703,27 @@
 /* Icons */
 
 	.icon {
+		@include icon;
 		text-decoration: none;
 
 		&:before {
-			display: inline-block;
-			font-family: FontAwesome;
 			font-size: 1.25em;
-			text-decoration: none;
-			font-style: normal;
-			font-weight: normal;
-			line-height: 1;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
 		}
 
 		> .label {
 			display: none;
+		}
+
+		&.solid {
+			&:before {
+				font-weight: 900;
+			}
+		}
+
+		&.brands {
+			&:before {
+				font-family: 'Font Awesome 5 Brands';
+			}
 		}
 
 		&.featured {
